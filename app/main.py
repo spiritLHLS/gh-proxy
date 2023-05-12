@@ -26,6 +26,12 @@ size_limit = 1024 * 1024 * 1024 * 999  # 允许的文件大小，默认999GB，�
 """
 white_list = '''
 spiritLHLS
+sjlleo
+lmc999
+fscarmen
+zhanghanyun
+showwin
+akopytov
 '''
 black_list = '''
 '''
