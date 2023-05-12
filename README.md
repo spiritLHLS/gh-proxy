@@ -11,6 +11,12 @@ docker run -d --name="gh-proxy" \
 
 第一个7823是你要暴露出去的端口
 
+一键删除镜像和容器站点
+
+```
+docker stop gh-proxy && docker rm gh-proxy && docker rmi ghcr.io/spiritlhls/ghproxy:latest
+```
+
 # 以下为原始仓库作者信息
 
 ## 简介
