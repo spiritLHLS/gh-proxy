@@ -3,13 +3,13 @@
 ### Docker部署
 
 ```
-docker run -d --name="gh-proxy-py" \
-  -p 0.0.0.0:80:80 \
+docker run -d --name="gh-proxy" \
+  -p 0.0.0.0:7823:80 \
   --restart=always \
   ghcr.io/spiritlhls/ghproxy:latest
 ```
 
-第一个80是你要暴露出去的端口
+第一个7823是你要暴露出去的端口
 
 # 以下为原始仓库作者信息
 
