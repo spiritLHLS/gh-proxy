@@ -1,5 +1,18 @@
 # gh-proxy
 
+### Docker部署
+
+```
+docker run -d --name="gh-proxy-py" \
+  -p 0.0.0.0:80:80 \
+  --restart=always \
+  spiritLHLS/gh-proxy:latest
+```
+
+第一个80是你要暴露出去的端口
+
+# 以下为原始仓库作者信息
+
 ## 简介
 
 github release、archive以及项目文件的加速项目，支持clone，有Cloudflare Workers无服务器版本以及Python版本
@@ -59,17 +72,6 @@ github release、archive以及项目文件的加速项目，支持clone，有Clo
 `PREFIX`是前缀，默认（根路径情况为"/"），如果自定义路由为example.com/gh/*，请将PREFIX改为 '/gh/'，注意，少一个杠都会错！
 
 ## Python版本部署
-
-### Docker部署
-
-```
-docker run -d --name="gh-proxy-py" \
-  -p 0.0.0.0:80:80 \
-  --restart=always \
-  hunsh/gh-proxy-py:latest
-```
-
-第一个80是你要暴露出去的端口
 
 ### 直接部署
 
