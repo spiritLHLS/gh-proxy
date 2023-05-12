@@ -6,7 +6,7 @@
 docker run -d --name="gh-proxy-py" \
   -p 0.0.0.0:80:80 \
   --restart=always \
-  spiritLHLS/gh-proxy:latest
+  ghcr.io/spiritlhls/ghproxy:latest
 ```
 
 第一个80是你要暴露出去的端口
