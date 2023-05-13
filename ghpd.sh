@@ -1,4 +1,7 @@
 #!/bin/bash
+# from https://github.com/spiritLHLS/gh-proxy
+
+cd /root >/dev/null 2>&1
 
 # 询问域名
 read -p "请输入要绑定的域名: " domain
@@ -15,7 +18,7 @@ docker run -d \
   --name caddy \
   -p 80:80 \
   -p 443:443 \
-  -v /path/to/Caddyfile:/etc/caddy/Caddyfile \
+  -v /root/Caddy/Caddyfile:/etc/caddy/Caddyfile \
   -v caddy_data:/data \
   -v caddy_config:/config \
   caddy
@@ -23,7 +26,7 @@ docker run -d \
 # 创建 Caddyfile
 echo "$domain {
   reverse_proxy localhost:7823
-}" > /path/to/Caddyfile
+}" > /root/Caddy/Caddyfile
 
 # 重启 Caddy 容器
 docker restart caddy
