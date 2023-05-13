@@ -17,19 +17,10 @@ docker run -d --name="gh-proxy" \
   ghcr.io/spiritlhls/ghproxy:latest
 ```
 
-第一个80是你要暴露出去的端口
-
-绑定域名
-
-```
-curl -L https://raw.githubusercontent.com/spiritLHLS/gh-proxy/master/ghpd.sh -o ghpd.sh && chmod +x ghpd.sh && bash ghpd.sh
-```
-
-一键删除镜像和容器站点
+第一个80是你要暴露出去的端口，如果使用80端口，绑定域名到本机IP即可使用域名
 
 ```
 docker stop gh-proxy && docker rm gh-proxy && docker rmi ghcr.io/spiritlhls/ghproxy:latest
-docker stop caddy && docker rm caddy && docker rmi caddy && rm -rf Caddy
 ```
 
 # 以下为原始仓库作者信息
