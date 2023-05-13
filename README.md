@@ -29,7 +29,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/gh-proxy/master/ghpd.sh -o 
 
 ```
 docker stop gh-proxy && docker rm gh-proxy && docker rmi ghcr.io/spiritlhls/ghproxy:latest
-docker stop caddy && docker rm caddy && docker rmi caddy
+docker stop caddy && docker rm caddy && docker rmi caddy && rm -rf Caddy
 ```
 
 # 以下为原始仓库作者信息
