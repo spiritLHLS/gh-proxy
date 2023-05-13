@@ -19,22 +19,19 @@ if [ ! -d "$caddy_folder" ]; then
   mkdir -p "$caddy_folder"
 fi
 
-# 安装 Caddy 容器
+# 创建 Caddyfile
+echo "$domain {
+  reverse_proxy localhost:7823
+}" > "$caddy_folder/Caddyfile"
+
+# 安装 Caddy 容器并映射数据目录和配置目录
 docker run -d \
   --name caddy \
   -p 80:80 \
   -p 443:443 \
-  -v /root/Caddy/Caddyfile:/etc/caddy/Caddyfile \
-  -v caddy_data:/data \
-  -v caddy_config:/config \
+  -v "$caddy_folder/Caddyfile:/etc/caddy/Caddyfile" \
+  -v "$caddy_folder/data:/data" \
+  -v "$caddy_folder/config:/config" \
   caddy
-
-# 创建 Caddyfile
-echo "$domain {
-  reverse_proxy localhost:7823
-}" > /root/Caddy/Caddyfile
-
-# 重启 Caddy 容器
-docker restart caddy
 
 echo "Caddy 安装并配置成功。现在你的域名 $domain 已被绑定到本机容器的 7823 端口。"
