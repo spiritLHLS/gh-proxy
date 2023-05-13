@@ -17,7 +17,7 @@ docker run -d --name="gh-proxy" \
   ghcr.io/spiritlhls/ghproxy:latest
 ```
 
-第一个80是你要暴露出去的端口，如果使用80端口，绑定域名到本机IP即可使用域名
+第一个80是你要暴露出去的端口，如果使用80端口，绑定cf解析的域名到本机IP再启用cf代理即可使用域名
 
 ```
 docker stop gh-proxy && docker rm gh-proxy && docker rmi ghcr.io/spiritlhls/ghproxy:latest
