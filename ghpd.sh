@@ -21,7 +21,7 @@ fi
 
 # 创建 Caddyfile
 echo "$domain {
-  reverse_proxy localhost:7823
+  reverse_proxy localhost:80
 }" > "$caddy_folder/Caddyfile"
 
 # 安装 Caddy 容器并映射数据目录和配置目录
