@@ -13,6 +13,12 @@ if [ -z "$ip_address" ]; then
   exit 1
 fi
 
+# 检查 Caddy 文件夹是否存在，如果不存在则创建
+caddy_folder="/root/Caddy"
+if [ ! -d "$caddy_folder" ]; then
+  mkdir -p "$caddy_folder"
+fi
+
 # 安装 Caddy 容器
 docker run -d \
   --name caddy \
