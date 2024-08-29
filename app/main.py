@@ -26,6 +26,7 @@ size_limit = 1024 * 1024 * 1024 * 999  # 允许的文件大小，默认999GB，�
   */repo1 # 封禁所有叫做repo1的仓库
 """
 white_list = '''
+spiritlhl
 spiritLHLS
 oneclickvirt
 sjlleo
@@ -35,6 +36,8 @@ zhanghanyun
 showwin
 akopytov
 masonr
+nxtrace
+Ntrace-core
 '''
 black_list = '''
 '''
