@@ -1,4 +1,4 @@
-FROM guysoft/uwsgi-nginx:python3.7
+FROM guysoft/uwsgi-nginx:python3.8-alpine
 
 LABEL maintainer="spiritlhl <admin@spiritlhl.net>"
 
