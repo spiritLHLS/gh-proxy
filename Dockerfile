@@ -1,7 +1,7 @@
 FROM guysoft/uwsgi-nginx:python3.8-alpine
 LABEL maintainer="spiritlhl <admin@spiritlhl.net>"
 RUN apk add --no-cache bash && \
-    pip install --no-cache-dir flask requests
+    pip install flask requests
 COPY ./app /app
 WORKDIR /app
 ENV PYTHONPATH=/app
