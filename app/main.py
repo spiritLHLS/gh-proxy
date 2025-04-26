@@ -44,6 +44,13 @@ mayaxcn
 17mon
 spiritysdx
 mzz2017
+CaiJimmy
+kasmtech
+kubevirt
+docker
+qemus
+webvirtcloud
+retspen
 '''
 black_list = '''
 '''
